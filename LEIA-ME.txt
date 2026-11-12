@@ -1,0 +1,61 @@
+PORTAL DE PROJETOS ESCOLARES RVV 2026/2027
+
+Arquivos:
+- index.html
+- logo-rvv-2627.png
+- hero-robotica.jpg
+- robotica.jpg
+- programacao.jpg
+- horta.jpg
+- escola.jpg
+
+Publicação no GitHub Pages:
+1. Extraia este ZIP.
+2. Abra o repositório blog-tech-rvv-2026.
+3. Faça upload de TODOS os arquivos acima para a raiz do repositório.
+4. Confirme o envio na branch main.
+5. Mantenha Settings > Pages > Deploy from a branch > main > /(root).
+6. Aguarde a atualização do site.
+
+Endereço esperado:
+https://pedrodonizetebinifurlan.github.io/blog-tech-rvv-2026/
+
+Atualizações:
+- Identidade visual alterada para RVV 2026/2027.
+- Tipografia atualizada com Manrope e DM Sans (com fontes alternativas).
+- Imagens locais para hero, robótica, programação e horta.
+- Categorias, pesquisa, filtros, cards de projetos e área Sobre.
+- Rodapé atualizado com endereço da escola, telefone, e-mail e link do Google Maps:
+  Rua Roberto Clark, 357, Centro, Birigui - SP, CEP 16200-043.
+
+Limites funcionais:
+O formulário de proposta e a área de aprovação são protótipos locais com localStorage. Não transmitem propostas para o professor, não sincronizam dados entre dispositivos e o código demonstrativo não é autenticação segura. Para cadastro colaborativo real, é necessário integrar autenticação, banco de dados e armazenamento de imagens (por exemplo, Supabase ou Firebase).
+Não publicar imagens, nomes ou dados identificáveis de estudantes sem as autorizações e validações necessárias.
+
+
+## Rodapé institucional atualizado
+Inclui professor responsável Pedro Donizete Bini Furlan, formação em Ciências Biológicas e Especialização em Ciências da Natureza e Matemática, além dos contatos e link do Google Maps.
+
+
+## Fotografias institucionais adicionadas
+- professor-pedro.jpg: fotografia do professor responsável, exibida no rodapé institucional.
+- fachada-rvv.jpg: fotografia da fachada da escola, exibida na seção Sobre o Portal.
+Mantenha esses arquivos na mesma pasta do index.html ao publicar no GitHub Pages.
+
+
+## Ajustes visuais desta versão
+- Logotipo institucional ampliado para melhor leitura em desktop e celular.
+- Fotografia da fachada reenquadrada em formato horizontal, com ajustes leves de luz, contraste e nitidez.
+- Imagem da escola apresentada em destaque, com legenda sobreposta e layout responsivo.
+- Novo arquivo obrigatório: fachada-rvv-destaque.jpg (manter na mesma pasta do index.html).
+
+
+## Ajustes de identidade e legibilidade
+- O símbolo da marca foi separado da inscrição pequena; o nome do portal e RVV 2026/2027 permanecem em texto HTML legível ao lado.
+- Removido o ícone de pessoa junto ao título Professor responsável.
+- Seção O que nos inspira redesenhada com ícones SVG e descrições explicativas.
+- Inclua todos os arquivos da pasta na raiz do repositório GitHub Pages.
+
+
+## Logotipo oficial RVV 26/27
+O arquivo logo-oficial-rvv-2627.png utiliza a arte original enviada, preservando o símbolo e os dizeres "PROJETOS ESCOLARES RVV 26/27". Não renomeie nem remova esse arquivo: ele é utilizado no cabeçalho e no rodapé do portal.

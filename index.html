@@ -1,0 +1,536 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog Tech | Projetos Escolares RVV 2026</title>
+
+    <style>
+
+        /* CONFIGURAÇÕES GERAIS */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #F2F5F9;
+            color: #183C63;
+            line-height: 1.6;
+        }
+
+        /* CABEÇALHO */
+
+        header {
+            background: linear-gradient(135deg, #173D65, #24578A);
+            color: #FFFFFF;
+            width: 100%;
+            padding: 35px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-top: 5px solid #F39816;
+        }
+
+        .logo {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            background: #FFFFFF;
+            padding: 7px;
+            border-radius: 12px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-top: 5px;
+        }
+
+        header p {
+            font-size: 16px;
+            color: #E5EDF7;
+        }
+
+        .projetos {
+            color: #FFFFFF;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .linha-destaque {
+            width: 65px;
+            height: 4px;
+            background-color: #F39816;
+            border-radius: 10px;
+            margin: 5px 0;
+        }
+
+        /* IDENTIFICAÇÃO DA TURMA */
+
+        .identificacao {
+            width: 100%;
+            background: #FFFFFF;
+            color: #183C63;
+            text-align: center;
+            padding: 18px 12px;
+            font-size: 15px;
+            font-weight: bold;
+            border-bottom: 4px solid #F39816;
+        }
+
+        /* CONTEÚDO PRINCIPAL */
+
+        main {
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 20px;
+        }
+
+        /* BANNER */
+
+        .banner {
+            display: block;
+            width: 100%;
+            max-width: 480px;
+            height: auto;
+            margin: 0 auto 35px;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        }
+
+        /* TÍTULOS */
+
+        .titulo-secao {
+            font-size: 25px;
+            color: #183C63;
+            border-left: 5px solid #F39816;
+            padding-left: 14px;
+            margin-bottom: 25px;
+        }
+
+        /* CARTÕES DAS PUBLICAÇÕES */
+
+        article {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            background-color: #FFFFFF;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        article:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        article img {
+            width: 125px;
+            height: 125px;
+            object-fit: contain;
+            border-radius: 10px;
+            background-color: #F2F5F9;
+            padding: 5px;
+            flex-shrink: 0;
+        }
+
+        .conteudo-artigo {
+            flex: 1;
+        }
+
+        article h2 {
+            color: #183C63;
+            font-size: 21px;
+            margin-bottom: 5px;
+        }
+
+        .artigo-autor {
+            font-size: 13px;
+            font-weight: bold;
+            color: #64748B;
+            margin-bottom: 12px;
+        }
+
+        .descricao {
+            color: #425466;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        /* BOTÕES DE INTERAÇÃO */
+
+        .interacoes {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            border: 1px solid #DCE5EF;
+            background-color: #F5F8FC;
+            color: #183C63;
+            padding: 9px 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background-color: #E3EDF7;
+            transform: scale(1.05);
+        }
+
+        button.ativo {
+            background-color: #DCEAF8;
+            border-color: #183C63;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background: linear-gradient(135deg, #173D65, #24578A);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 30px 15px;
+            margin-top: 45px;
+            border-top: 4px solid #F39816;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        /* RESPONSIVIDADE */
+
+        @media (max-width: 650px) {
+
+            header {
+                padding: 25px 15px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            .identificacao {
+                font-size: 13px;
+            }
+
+            main {
+                padding: 14px;
+                margin: 20px auto;
+            }
+
+            .titulo-secao {
+                font-size: 22px;
+            }
+
+            article {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+
+            article img {
+                width: 115px;
+                height: 115px;
+            }
+
+            article h2 {
+                font-size: 19px;
+            }
+
+            .descricao {
+                text-align: left;
+            }
+
+            .interacoes {
+                justify-content: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- CABEÇALHO INSTITUCIONAL -->
+
+    <header>
+
+        <img src="logo-rvv.jpeg"
+             alt="Logotipo da Escola Estadual Professora Regina Valarini Vieira"
+             class="logo">
+
+        <h1>💻 BLOG TECH</h1>
+
+        <p>Conectando ideias, tecnologia e conhecimento!</p>
+
+        <div class="linha-destaque"></div>
+
+        <p class="projetos">PROJETOS ESCOLARES RVV 2026</p>
+
+    </header>
+
+
+    <!-- IDENTIFICAÇÃO DA TURMA -->
+
+    <section class="identificacao">
+
+        2ª Série A | Escola Estadual Professora Regina Valarini Vieira
+
+    </section>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main>
+
+        <!-- BANNER DOS PROJETOS ESCOLARES -->
+
+        <img src="projetos-escolares.jpeg"
+             alt="Projetos Escolares RVV 2026"
+             class="banner">
+
+
+        <h2 class="titulo-secao">Nossas publicações</h2>
+
+
+        <!-- PRIMEIRA PUBLICAÇÃO -->
+
+        <article>
+
+            <img src="logo-rvv.jpeg"
+                 alt="Logotipo RVV">
+
+            <div class="conteudo-artigo">
+
+                <h2>Bem-vindos ao nosso Blog Tech!</h2>
+
+                <p class="artigo-autor">
+                    Por: Professor Pedro Furlan e estudantes da RVV_2026
+                </p>
+
+                <p class="descricao">
+
+                    Sejam todos bem-vindos ao nosso espaço de
+                    aprendizagem, criatividade e inovação!
+
+                    Este blog foi criado para compartilhar
+                    conhecimentos, experiências e descobertas
+                    sobre o universo da tecnologia.
+
+                </p>
+
+                <p class="descricao">
+
+                    Aqui vamos explorar programação, inteligência
+                    artificial, robótica, cultura digital e inovação
+                    tecnológica.
+
+                </p>
+
+                <div class="interacoes">
+
+                    <button type="button" aria-label="Curtir publicação">
+                        ❤️ <span>0</span>
+                    </button>
+
+                    <button type="button" aria-label="Apoiar publicação">
+                        👍 <span>0</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- SEGUNDA PUBLICAÇÃO -->
+
+        <article>
+
+            <img src="projetos-escolares.jpeg"
+                 alt="Projetos Escolares RVV 2026">
+
+            <div class="conteudo-artigo">
+
+                <h2>Tecnologia e protagonismo juvenil</h2>
+
+                <p class="artigo-autor">
+                    Por: Professor Pedro Furlan e estudantes da RVV_2026
+                </p>
+
+                <p class="descricao">
+
+                    A tecnologia nos oferece inúmeras possibilidades
+                    de criação, aprendizagem e transformação.
+
+                    Por meio de projetos, pesquisas e atividades
+                    práticas, nossos estudantes desenvolvem
+                    competências e trabalham em equipe.
+
+                </p>
+
+                <p class="descricao">
+
+                    Nosso objetivo é transformar ideias em soluções,
+                    valorizando a criatividade, a colaboração
+                    e o protagonismo juvenil.
+
+                </p>
+
+                <div class="interacoes">
+
+                    <button type="button" aria-label="Curtir publicação">
+                        ❤️ <span>0</span>
+                    </button>
+
+                    <button type="button" aria-label="Apoiar publicação">
+                        👍 <span>0</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- TERCEIRA PUBLICAÇÃO -->
+
+        <article>
+
+            <img src="logo-rvv.jpeg"
+                 alt="Logotipo da escola RVV">
+
+            <div class="conteudo-artigo">
+
+                <h2>Aprender, criar e compartilhar!</h2>
+
+                <p class="artigo-autor">
+                    Por: Professor Pedro Furlan e estudantes da RVV_2026
+                </p>
+
+                <p class="descricao">
+
+                    Acreditamos que aprender vai muito além da sala
+                    de aula. Cada experiência, descoberta e projeto
+                    representa uma oportunidade de desenvolver
+                    novas habilidades.
+
+                </p>
+
+                <p class="descricao">
+
+                    Este espaço é nosso! Um ambiente para divulgar
+                    ideias, apresentar produções e mostrar o
+                    protagonismo dos estudantes da RVV.
+
+                </p>
+
+                <div class="interacoes">
+
+                    <button type="button" aria-label="Curtir publicação">
+                        ❤️ <span>0</span>
+                    </button>
+
+                    <button type="button" aria-label="Apoiar publicação">
+                        👍 <span>0</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            <strong>Escola Estadual Professora Regina Valarini Vieira</strong>
+        </p>
+
+        <p>2ª Série A | Projetos Escolares RVV 2026</p>
+
+        <p>Professor Pedro Furlan e estudantes</p>
+
+        <p>Educação, Tecnologia e Protagonismo Juvenil</p>
+
+        <p>© 2026 - Blog Tech RVV</p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT: SISTEMA DE CURTIDAS -->
+
+    <script>
+
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach(function (botao) {
+
+            let curtiu = false;
+
+            botao.addEventListener("click", function () {
+
+                const contador = botao.querySelector("span");
+
+                if (!curtiu) {
+
+                    contador.textContent =
+                        Number(contador.textContent) + 1;
+
+                    curtiu = true;
+
+                    botao.classList.add("ativo");
+
+                } else {
+
+                    contador.textContent =
+                        Number(contador.textContent) - 1;
+
+                    curtiu = false;
+
+                    botao.classList.remove("ativo");
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
